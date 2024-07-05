@@ -1,0 +1,246 @@
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Crear el servidor
+const server = http.createServer((req, res) => {
+  // Establecer el encabezado de respuesta HTTP
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Enviar la respuesta al cliente
+  res.end('¡Hola, Mundo!\n');
+});
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Crear el servidor
+const server = http.createServer((req, res) => {
+  // Establecer el encabezado de respuesta HTTP
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Enviar la respuesta al cliente
+  res.end('¡Hola, Mundo!\n');
+});
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Establecer el encabezado de respuesta HTTP
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Enviar la respuesta al cliente
+  res.end('¡Hola, Mundo!\n');
+};
+
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Establecer el código de estado de la respuesta a 200 (OK)
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Enviar la respuesta al cliente
+  res.end('¡Hola, Mundo!\n');
+};
+
+// Crear el servidor y pasar la función handleRequest
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Establecer el código de estado de la respuesta a 200 (OK)
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Enviar la respuesta al cliente
+  res.end('¡Hola, Mundo!\n');
+};
+
+// Crear el servidor y pasar la función handleRequest como controlador de solicitudes
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Verificar si la solicitud es de tipo POST
+  if (req.method === 'POST') {
+    let body = '';
+
+    // Recibir los datos del cuerpo de la solicitud
+    req.on('data', chunk => {
+      body += chunk.toString(); // Convertir el buffer a string
+    });
+
+    // Al finalizar la recepción de datos
+    req.on('end', () => {
+      // Establecer el código de estado de la respuesta a 200 (OK)
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      // Enviar la respuesta al cliente con los datos recibidos
+      res.end(`Datos recibidos: ${body}\n`);
+    });
+  } else {
+    // Si no es una solicitud POST, manejar como antes
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('¡Hola, Mundo!\n');
+  }
+};
+
+// Crear el servidor y pasar la función handleRequest como controlador de solicitudes
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Verificar si la solicitud es de tipo POST
+  if (req.method === 'POST') {
+    let body = '';
+
+    // Recibir los datos del cuerpo de la solicitud
+    req.on('data', chunk => {
+      body += chunk.toString(); // Convertir el buffer a string y concatenar
+    });
+
+    // Al finalizar la recepción de datos
+    req.on('end', () => {
+      // Establecer el código de estado de la respuesta a 200 (OK)
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      // Enviar la respuesta al cliente con los datos recibidos
+      res.end(`Datos recibidos: ${body}\n`);
+    });
+  } else {
+    // Si no es una solicitud POST, manejar como antes
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('¡Hola, Mundo!\n');
+  }
+};
+
+// Crear el servidor y pasar la función handleRequest como controlador de solicitudes
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Verificar si la solicitud es de tipo POST
+  if (req.method === 'POST') {
+    let body = '';
+
+    // Recibir los datos del cuerpo de la solicitud
+    req.on('data', chunk => {
+      body += chunk.toString(); // Convertir el buffer a string y concatenar
+    });
+
+    // Al finalizar la recepción de datos
+    req.on('end', () => {
+      // Establecer el código de estado de la respuesta a 200 (OK)
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      // Enviar la respuesta al cliente con los datos recibidos
+      res.end(`Datos recibidos: ${body}\n`);
+    });
+  } else {
+    // Si no es una solicitud POST, manejar como antes
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('¡Hola, Mundo!\n');
+  }
+};
+
+// Crear el servidor y pasar la función handleRequest como controlador de solicitudes
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+node server.js
+curl -X POST -d "param1=value1&param2=value2" http://localhost:3000
+// Importar el módulo HTTP de Node.js
+const http = require('http');
+
+// Configurar el puerto en el que el servidor escuchará
+const PORT = 3000;
+
+// Definir la función handleRequest
+const handleRequest = (req, res) => {
+  // Verificar si la solicitud es de tipo POST
+  if (req.method === 'POST') {
+    let body = '';
+
+    // Recibir los datos del cuerpo de la solicitud
+    req.on('data', chunk => {
+      body += chunk.toString(); // Convertir el buffer a string y concatenar
+    });
+
+    // Al finalizar la recepción de datos
+    req.on('end', () => {
+      // Establecer el código de estado de la respuesta a 200 (OK)
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      // Enviar la respuesta al cliente con el mensaje personalizado
+      res.end(`Hola, ${body}!\n`);
+    });
+  } else {
+    // Si no es una solicitud POST, manejar como antes
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('¡Hola, Mundo!\n');
+  }
+};
+
+// Crear el servidor y pasar la función handleRequest como controlador de solicitudes
+const server = http.createServer(handleRequest);
+
+// Hacer que el servidor escuche en el puerto configurado
+server.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
